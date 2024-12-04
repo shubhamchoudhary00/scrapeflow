@@ -120,4 +120,5 @@ const MobileSidebar = () => {
     </div>
   );
 };
-export default DesktopSidebar;
+
+export { MobileSidebar, DesktopSidebar };

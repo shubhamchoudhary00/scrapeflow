@@ -1,6 +1,7 @@
 import BreadcrumbHeader from "@/components/BreadcrumbHeader";
-import DesktopSidebar from "@/components/Sidebar";
+import { DesktopSidebar } from "@/components/Sidebar";
 import { ModeToggle } from "@/components/ThemeModeToggle";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 import { Separator } from "@radix-ui/react-context-menu";
 import React from "react";
 
@@ -13,6 +14,9 @@ const layout = ({ children }: { children: React.ReactNode }) => {
           <BreadcrumbHeader />
           <div className="gap-1 flex items-center">
             <ModeToggle />
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </div>
         </header>
         <Separator />
